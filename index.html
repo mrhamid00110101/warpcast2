@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Meta Tags for Warpcast -->
+    <meta property="og:title" content="Join the Whitelist">
+    <meta property="og:description" content="Get exclusive access to our game! Join the whitelist now.">
+    <meta property="og:image" content="https://i.imgur.com/OgDdGhN.jpeg">
+    <meta property="og:url" content="https://warpwarp2323.netlify.app/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Warpcast">
+    <meta property="og:video" content="https://warpwarp2323.netlify.app/">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Join the Whitelist">
+    <meta name="twitter:description" content="Get exclusive access to our game! Join the whitelist now.">
+    <meta name="twitter:image" content="https://i.imgur.com/OgDdGhN.jpeg">
+    <meta name="twitter:site" content="@warpcast">
+
+    <!-- Additional Open Graph Meta Tags for social sharing -->
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+
+    <!-- App-specific Meta Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Exclusive game whitelist access">
+    <meta name="keywords" content="game, whitelist, exclusive, free access, Warpcast">
+    <meta name="author" content="mrhamid">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:determiner" content="the">
+    
+    <title>Join the Whitelist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            overflow: hidden;
+            background-color: #1a1a2e;
+            position: relative;
+        }
+
+        body {
+            flex-grow: 1;
+        }
+
+        .particle {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            opacity: 0.5;
+        }
+
+        @keyframes moveParticles {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(calc(50vw * var(--x)), calc(50vh * var(--y))) rotate(90deg); }
+            50% { transform: translate(calc(-50vw * var(--x)), calc(-50vh * var(--y))) rotate(180deg); }
+            75% { transform: translate(calc(50vw * var(--x)), calc(-50vh * var(--y))) rotate(270deg); }
+            100% { transform: translate(0, 0) rotate(360deg); }
+        }
+
+        .title-box {
+            background: rgba(255, 255, 255, 0.12);
+            padding: 8px 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            text-align: center;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            max-width: 80%;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        .main-box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 18px;
+            backdrop-filter: blur(18px);
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+            box-shadow: 0px 8px 25px rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .button {
+            background: linear-gradient(90deg, #ff416c, #ff4b2b);
+            color: white;
+            padding: 12px 20px;
+            font-size: 1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 15px;
+            width: 100%;
+            max-width: 260px;
+            box-shadow: 0px 3px 10px rgba(255, 65, 108, 0.5);
+        }
+
+        .button:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 5px 15px rgba(255, 65, 108, 0.7);
+        }
+
+        .loading {
+            display: none;
+            margin-top: 15px;
+            width: 100%;
+            height: 8px;
+            background-color: #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .loading-bar {
+            height: 100%;
+            background-color: #4caf50;
+            animation: loadingAnimation 2.5s linear forwards;
+        }
+
+        @keyframes loadingAnimation {
+            0% { width: 0%; }
+            100% { width: 100%; }
+        }
+
+        .status-message {
+            margin-top: 15px;
+            font-size: 1rem;
+            color: #4caf50;
+            font-weight: 600;
+            display: none;
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1rem;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0px 3px 10px rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="title-box">
+        🚀 Join the Whitelist!
+    </div>
+    <div class="main-box">
+        <p style="color:white; text-align:center;">🎮 Get FREE access to our game before launch! Don’t miss out on exclusive perks! ✨</p>
+
+        <button class="button" onclick="joinWhitelist()">🔥 Join Now</button>
+
+        <div class="loading" id="loading">
+            <div class="loading-bar" id="loadingBar"></div>
+        </div>
+
+        <div class="status-message" id="statusMessage">
+            ✅ You are on the whitelist! <br>
+            Enjoy your exclusive access. 🎮
+        </div>
+    </div>
+
+    <footer>
+         Built by <span style="color: #ff4b2b;">/mrhamid ❤️</span>
+    </footer>
+
+    <script>
+        const colors = ["#FF5733", "#33FF57", "#3357FF", "#FF33A8", "#33FFF9", "#FFD733"];
+
+        const particleCount = 20;
+
+        for (let i = 0; i < particleCount; i++) {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+
+            const x = Math.random();
+            const y = Math.random();
+
+            particle.style.setProperty('--x', x);
+            particle.style.setProperty('--y', y);
+            particle.style.left = `${Math.random() * 100}vw`;
+            particle.style.top = `${Math.random() * 100}vh`;
+            particle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+            particle.style.animation = `moveParticles ${5 + Math.random() * 5}s infinite alternate ease-in-out`;
+
+            document.body.appendChild(particle);
+        }
+
+        function joinWhitelist() {
+            document.querySelector('.button').style.display = 'none';
+            document.getElementById('loading').style.display = 'block';
+
+            fetch('https://warpcast-production.up.railway.app/register', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ username: "test_user" })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    document.getElementById('loading').style.display = 'none';
+                    document.getElementById('statusMessage').style.display = 'block';
+                    
+                    setTimeout(() => {
+                        const frameURL = encodeURIComponent("https://warpwarp2323.netlify.app/");
+                        const postText = encodeURIComponent("🚀 I’m on the whitelist!\n\n🎮 Join the whitelist now for FREE access to our game!\n\n✅ How to join:\n1. Join our /duckycoin channel 🦆\n2. Follow us and get your spot! 📲\n\n🎁 Exclusive rewards and early access – don’t miss out! ✨");
+
+                        window.location.href = `https://warpcast.com/~/compose?text=${postText}&embeds[]=${frameURL}`;
+                    }, 1500);
+                } else {
+                    document.querySelector('.button').style.display = 'block';
+                    document.getElementById('loading').style.display = 'none';
+                    alert("Something went wrong, please try again.");
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert("Something went wrong, please try again.");
+            });
+        }
+    </script>
+
+</body>
+</html>

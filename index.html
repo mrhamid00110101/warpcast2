@@ -7,7 +7,7 @@
     <!-- Meta Tags for Warpcast -->
     <meta property="og:title" content="Join the Whitelist">
     <meta property="og:description" content="Get exclusive access to our game! Join the whitelist now.">
-    <meta property="og:image" content="https://warpwarp2323.netlify.app/">
+    <meta property="og:image" content="https://warpwarp2323.netlify.app/assets/frame-image.png">
     <meta property="og:url" content="https://warpwarp2323.netlify.app/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Warpcast">
@@ -17,7 +17,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Join the Whitelist">
     <meta name="twitter:description" content="Get exclusive access to our game! Join the whitelist now.">
-    <meta name="twitter:image" content="https://i.imgur.com/OgDdGhN.jpeg">
+    <meta name="twitter:image" content="https://warpwarp2323.netlify.app/assets/frame-image.png">
     <meta name="twitter:site" content="@warpcast">
 
     <!-- Additional Open Graph Meta Tags for social sharing -->
@@ -32,7 +32,23 @@
     <meta name="author" content="mrhamid">
     <meta property="og:locale" content="en_US">
     <meta property="og:determiner" content="the">
-    
+
+    <!-- Warpcast Frame Meta Tag -->
+    <meta name="fc:frame" content='{
+      "version":"next",
+      "imageUrl":"https://warpwarp232369.netlify.app/assets/frame-image.png",
+      "button": {
+        "title":"Join Whitelist",
+        "action": {
+          "type":"launch_frame",
+          "name":"WarpWarp",
+          "url":"https://warpwarp232369.netlify.app/",
+          "splashImageUrl":"https://warpwarp232369.netlify.app/assets/splash.jpg",
+          "splashBackgroundColor":"#000000"
+        }
+      }
+    }'>
+
     <title>Join the Whitelist</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -231,7 +247,7 @@
                     document.getElementById('statusMessage').style.display = 'block';
                     
                     setTimeout(() => {
-                        const frameURL = encodeURIComponent("https://warpwarp2323.netlify.app/");
+                        const frameURL = encodeURIComponent("https://warpwarp232369.netlify.app/");
                         const postText = encodeURIComponent("🚀 I’m on the whitelist!\n\n🎮 Join the whitelist now for FREE access to our game!\n\n✅ How to join:\n1. Join our /duckycoin channel 🦆\n2. Follow us and get your spot! 📲\n\n🎁 Exclusive rewards and early access – don’t miss out! ✨");
 
                         window.location.href = `https://warpcast.com/~/compose?text=${postText}&embeds[]=${frameURL}`;
